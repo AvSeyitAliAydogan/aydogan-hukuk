@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aydoğan Hukuk Bürosu | Av. Seyit Ali Aydoğan</title>
+    <!-- Kartvizitteki dar/uzun modern font stili için Bebas Neue ve Serif Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Kartvizitinizden Birebir Alınan Renkler */
+            --bg-color: #E0DACF;        /* Kartvizit Arka Plan Beji */
+            --brand-red: #4A1521;       /* Kartvizit Logosu ve Yazı Bordo Tonu */
+            --card-bg: #EAE5DC;         /* Hafif Açık Kart Tonu */
+            --border-color: #C8BFB0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--brand-red);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .digital-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(74, 21, 33, 0.08);
+            max-width: 650px;
+            width: 100%;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Kartvizit Logosu Stili */
+        .logo-area {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .logo-main {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.8rem;
+            letter-spacing: 2px;
+            line-height: 0.9;
+            color: var(--brand-red);
+            text-transform: lowercase;
+        }
+
+        .logo-sub {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.1;
+            text-align: left;
+            color: var(--brand-red);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* İsim ve Unvan */
+        .person-title {
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--brand-red);
+            padding-bottom: 25px;
+        }
+
+        .person-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--brand-red);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .person-role {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 6px;
+            color: var(--brand-red);
+            text-transform: uppercase;
+        }
+
+        /* İletişim Bilgileri */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--brand-red);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            border-color: var(--brand-red);
+            background-color: rgba(74, 21, 33, 0.04);
+        }
+
+        .contact-link i {
+            font-size: 1.2rem;
+        }
+
+        .address-text {
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Mobil Uyum */
+        @media (max-width: 500px) {
+            .digital-card {
+                padding: 35px 20px;
+            }
+
+            .logo-main {
+                font-size: 2.8rem;
+            }
+
+            .logo-sub {
+                font-size: 0.9rem;
+            }
+
+            .person-name {
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+            }
+
+            .person-role {
+                font-size: 0.9rem;
+                letter-spacing: 4px;
+            }
+
+            .contact-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="digital-card">
+        <!-- Kartvizitteki Logo Tasarımı -->
+        <div class="logo-area">
+            <span class="logo-main">aydoğan</span>
+            <div class="logo-sub">
+                <span>HUKUK</span>
+                <span>BÜROSU</span>
+            </div>
+        </div>
+
+        <!-- İsim ve Unvan -->
+        <div class="person-title">
+            <h1 class="person-name">SEYİT ALİ AYDOĞAN</h1>
+            <h2 class="person-role">AVUKAT</h2>
+        </div>
+
+        <!-- Tıklanabilir İletişim Bağlantıları -->
+        <div class="contact-list">
+            <!-- Telefon -->
+            <a href="tel:+905314525151" class="contact-link">
+                <i class="fa-solid fa-phone"></i>
+                <span>+90 531 452 51 51</span>
+            </a>
+
+            <!-- Mail -->
+            <a href="mailto:saliaydogan10@gmail.com" class="contact-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>saliaydogan10@gmail.com</span>
+            </a>
+
+            <!-- Google Maps Konum -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Mansuro%C4%9Flu+Mah.+286%2F3.+Sk.+No%3A3+Kat+%3A+3+Daire+%3A+23+35535+Bayrakl%C4%B1%2F%C4%B0zmir" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="address-text">Mansuroğlu Mah. 286/3. Sk. No:3, Kat : 3 Daire : 23<br>35535 Bayraklı / İzmir</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
